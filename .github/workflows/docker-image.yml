@@ -8,7 +8,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: java-goof
+  IMAGE_NAME: javagoof-c1as
   VERSION: latest
   IMAGE_PATH: registry.hub.docker.com/raphabot/java-goof
   # IMAGE_PATH: ${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.DOCKER_USERID }}/$IMAGE_NAME:$VERSION
@@ -69,7 +69,7 @@ jobs:
           # Mandatory
           DSSC_IMAGE_NAME: registry.hub.docker.com/raphabot/java-goof # Change with your image path.
           # DSSC_IMAGE_NAME: $IMAGE_PATH
-          DSSC_SMARTCHECK_HOST: demo.dssmartcheck.com
+          DSSC_SMARTCHECK_HOST: c1cs.nedemos.io
           DSSC_SMARTCHECK_USER: endtoenddemo
           DSSC_SMARTCHECK_PASSWORD: ${{ secrets.DSSC_SMARTCHECK_PASSWORD }}
           DSSC_IMAGE_PULL_AUTH: '{"username": "${{ secrets.DOCKER_USERID }}","password": "${{ secrets.DOCKER_KEY }}"}'
@@ -82,4 +82,4 @@ jobs:
           # DSSC_PREREGISTRY_USER: admin
           # DSSC_PREREGISTRY_PASSWORD: 12345
           # DSSC_RESULTS_FILE: /results.json
-          # DSSC_FINDINGS_THRESHOLD: '{"malware": 100, "vulnerabilities": { "defcon1": 100, "critical": 100, "high": 100 }, "contents": { "defcon1": 100, "critical": 100, "high": 100 }, "checklists": { "defcon1": 100, "critical": 100, "high": 100 }}'
+          DSSC_FINDINGS_THRESHOLD: '{"malware": 100, "vulnerabilities": { "defcon1": 100, "critical": 100, "high": 100 }, "contents": { "defcon1": 100, "critical": 100, "high": 100 }, "checklists": { "defcon1": 100, "critical": 100, "high": 100 }}'
